@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-//create your first component
 export const TrafficLight = () => {
 	const [color, setColor] = useState("red");
 
 	return (
-		<>
+		<div className="body">
 			<div className="trafficPole container">
 				<div
 					className={color === "red" ? "redOn" : "redOff"}
@@ -20,6 +19,6 @@ export const TrafficLight = () => {
 					onClick={() => setColor("green")}
 				/>
 			</div>
-		</>
+		</div>
 	);
 };

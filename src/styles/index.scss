@@ -1,5 +1,15 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+
+body {
+	background: linear-gradient(blue, cyan);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
 .trafficPole{
   background: #222;
   width: 170px;
@@ -8,7 +18,21 @@
   position: relative;
   border: solid 5px #333;
   align-items: center;
-  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.trafficPole:after{
+  background: rgb(27, 27, 27);
+  content: "";
+  width: 40px;
+  height: 500px;
+  margin-left: 46px;
+  position: absolute;
+  top: -350px;
+  z-index: -1;
 }
 
 .red {
@@ -23,6 +47,8 @@
 
 .redOn {
   background: red;
+  background-image: radial-gradient(#7c0000, transparent);
+  background-size: 3px 3px; 
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -31,16 +57,32 @@
   left: 30px;
   box-shadow: 
     0 0 20px #111 inset,
-    0 0 10px red;
+    0 0 40px red;
 }
+
+.redOn::after {
+	border-right: 8px solid rgba(255, 255, 255, 0.6);
+	border-radius: 150%;
+	content: ' ';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;
+    height: 80px;
+    
+}
+
 .redOff {
-  background:grey;
+  background: #7c0000;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: solid 5px #333;
   position: absolute;
   top: 20px;
   left: 30px;
+  box-shadow: 
+    0 0 20px #111 inset,
 }
 
 .yellow {
@@ -55,6 +97,8 @@
 
 .yellowOn {
   background: yellow;
+  background-image: radial-gradient(#b4b400, transparent);
+  background-size: 3px 3px; 
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -63,21 +107,36 @@
   left: 30px;
   box-shadow: 
     0 0 20px #111 inset,
-    0 0 10px yellow;
+    0 0 40px yellow;
+}
+
+
+.yellowOn::after {
+	border-right: 8px solid rgba(255, 255, 255, 0.6);
+	border-radius: 150%;
+	content: ' ';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;
+	height: 80px;
 }
 
 .yellowOff {
-  background:grey;
+  background:#b4b400;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: solid 5px #333;
   position: absolute;
   top: 145px;
   left: 30px;
+  box-shadow: 
+   0 0 20px #111 inset,
 }
 
 .green {
-  background: green;
+  background: lime;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -87,7 +146,9 @@
 }
 
 .greenOn{
-  background: green;
+  background: lime;
+  background-image: radial-gradient(#005a05, transparent);
+  background-size: 3px 3px; 
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -96,15 +157,29 @@
   left: 30px;
   box-shadow: 
     0 0 20px #111 inset,
-    0 0 10px lime;
+    0 0 40px lime;
+}
+
+.greenOn::after {
+	border-right: 8px solid rgba(255, 255, 255, 0.6);
+	border-radius: 150%;
+	content: ' ';
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 80px;
+	height: 80px;
 }
 
 .greenOff{
-  background:grey;
+  background:#005a05;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border: solid 5px #333;
   position: absolute;
   top: 270px;
   left: 30px;
+  box-shadow: 
+    0 0 20px #111 inset,
 }

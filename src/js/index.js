@@ -12,4 +12,5 @@ import "../styles/index.scss";
 import { TrafficLight } from "./component/home.js";
 
 //render your react application
+
 ReactDOM.render(<TrafficLight />, document.querySelector("#app"));
