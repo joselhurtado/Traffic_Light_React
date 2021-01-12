@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 //create your first component
 export const TrafficLight = () => {
-	const [color, setColor] = useState("green");
+	const [color, setColor] = useState("red");
 
 	return (
 		<>
