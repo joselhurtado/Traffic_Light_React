@@ -2,6 +2,21 @@ import React, { useState, useEffect } from "react";
 
 export const TrafficLight = () => {
 	const [color, setColor] = useState("red");
+	useEffect(
+		() => {
+			const interval = setInterval(() => {
+				color === "green"
+					? setColor("red")
+					: color === "yellow"
+						? setColor("green")
+						: color === "red"
+							? setColor("yellow")
+							: null;
+			}, 1000);
+			return () => clearInterval(interval);
+		},
+		[color]
+	);
 
 	return (
 		<div className="body">
